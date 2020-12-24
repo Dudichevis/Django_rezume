@@ -1,0 +1,58 @@
+{% extends 'webexample/layout.html' %}
+{% load static %}
+
+
+{% block title %}Онлайн-резюме{% endblock %}
+
+{% block info_menu %}
+          <ul class = "menu">
+            <li class = "selected"><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'rezume' %}">Резюме</a></li>
+            <li><a href="{% url 'news_home' %}">Новости</a></li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+          </ul>
+{% endblock %}
+
+{% block content %}
+  <div class = "about_me">
+
+          <div class="foto">
+            <img src="{% static 'webexample/img/foto.jpg' %}" alt="Igor Dudichev">
+          </div>
+
+          <div class="info">
+            <h3>Игорь Дудичев</h3>
+          <p><i>Дата рождения:</i> 15.12.1989</p>
+          <p><i>Проживание:</i> Нижний Новгород, Канавинский район</p>
+          <p>Готов к командировкам</p>
+          <p>Готов к переезду в другой город</p>
+          <p><b>Контактная информация:</b></p>
+          <p><i>Телефон: </i>+7 953 577 88 05</p>
+          <p><i>Электронная почта:</i> <a class="mail" href="https://mail.google.com/mail/u/0/#inbox" target="blank">igordudichev@gmail.com</a></p>
+          <p><i>Желаемая должность:</i> Python developer(стажер)</p>
+          <form action="{% url 'rezume' %}" method="GET">
+            <button type = "submit"><i>Резюме</i></button>
+          </form>
+          </div>
+    
+        </div >
+
+        <div class = "skills">
+          <h3>Навыки</h3>
+          <table class="skills_table">
+            <tr class = "first">
+              <td>HTML/CSS <p>Базовый</p></td>
+              <td>Django <p>Базовый</p></td>
+              <td>Python <p>Базовый</p></td>
+            </tr>
+            <tr class = "second">
+              <td>SQL <p>Базовый</p></td>
+              <td>Git <p>Базовый</p></td>
+              <td>Английский <p>Elementary</p></td>
+            </tr>
+          </table>
+
+        </div>
+{% endblock %}
+
+

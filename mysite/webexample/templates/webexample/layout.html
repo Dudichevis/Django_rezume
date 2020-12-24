@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="My rezume" />
+	  <meta name="keywords" content="резуме, примеры резюме" />
+    <link rel="stylesheet" href="{% static 'webexample/css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+  </head>
+  <body>
+  		<div class = "header">
+  			<div class = "logo">
+  				<h1>Игорь Дудичев</h1>
+  				<p>Python developer</p>
+  			</div>
+
+  			<div class = "menubar">
+
+            {% block info_menu %}
+            {% endblock %}
+
+  			</div>
+  		</div>
+
+
+
+      <div class="main">
+          
+          {% block content %}
+          {% endblock %}
+
+
+      </div>
+
+  		<div class ="footer">
+  			<p>&copy; 2021 Игорь Дудичев</p>
+  			<div class="icon">
+  				<ul>
+  					<li><a href="https://tele.click/{username}" target="blank"><i class="fab fa-telegram"></i></a></li>
+  					<li><a href="https://vk.com/igor_dudichev" target="blank"><i class="fab fa-vk"></i></a></li>
+  					<li><a href="tel: +79535778805" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+  					<li><a href="tel: +79535778805" target="blank"><i class="fab fa-viber"></i></a></li>
+  				</ul>
+  			</div>
+  			<div class="stop"></div>
+  		</div>
+
+  </body>
+</html>

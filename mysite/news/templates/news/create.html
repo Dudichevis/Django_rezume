@@ -1,0 +1,49 @@
+{% extends 'webexample/layout.html' %}
+
+
+{% block title %}Добавление статьи{% endblock %}
+
+{% block info_menu %}
+          <ul class = "menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'rezume' %}">Резюме</a></li>
+            <li class="selected"><a href="{% url 'news_home' %}">Новости</a>
+              <ul class="submenu">
+                <li><a href="{% url 'create' %}" id="qwert">Добавить новость</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+          </ul>
+{% endblock %}
+
+
+
+{% block content %}
+
+        <div class="add_news">
+        <h2>Форма по добавлению статьи</h2> 
+        <form method="Post">
+          {% csrf_token %}
+          {{ form.title }} <br>
+          {{ form.anons }}<br>
+          {{ form.full_text }} <br>
+          {{ form.date }} <br>
+          <span>{{ error }}</span>
+          <button type="submit" class="btn btn-success">Добавить статью</button>
+        </form>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

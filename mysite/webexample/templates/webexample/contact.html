@@ -1,0 +1,63 @@
+{% extends 'webexample/layout.html' %}
+
+
+{% block title %}Контакты{% endblock %}
+
+{% block info_menu %}
+          <ul class = "menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'rezume' %}">Резюме</a></li>
+            <li><a href="{% url 'news_home' %}">Новости</a></li>
+            <li class="selected"><a href="{% url 'contact' %}">Контакты</a></li>
+          </ul>
+{% endblock %}
+
+
+
+{% block content %}
+
+        <div class="contact">
+          <div class="contact_info">
+            <h2>КОНТАКТЫ</h2>
+            <h3>Игорь Дудичев</h3>
+            <p>Нижний Новгород</p>
+            <p><b>Т. </b> +7 953 577 88 05</p>
+            <p><b>Email </b><a href="https://mail.google.com/mail/u/0/#inbox" target="blank">igordudichev@gmail.com</a></p>
+          </div>
+          
+        
+          <div class="form">
+            <h3>Напишите мне</h3>
+            <form method="POST">
+              {% csrf_token %}
+      
+              <fieldset>
+                <legend>Обратная связь</legend>
+                <p>Имя</p>
+               {{ form.name }}
+                <p>E-mail</p> 
+                 {{ form.email }}
+                <p>Контактный телефон</p>
+                {{ form.phone }}
+                <p>Сообщение</p>
+               {{ form.description }}
+                <button type="submit" class="btn">Отправить</button>
+                </fieldset>
+            </form>
+          </div>
+          
+        </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

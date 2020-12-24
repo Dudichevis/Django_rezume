@@ -1,0 +1,105 @@
+{% extends 'webexample/layout.html' %}
+{% load static %}
+
+
+{% block title %}Резюме{% endblock %}
+
+{% block info_menu %}
+          <ul class = "menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li class="selected"><a href="{% url 'rezume' %}">Резюме</a></li>
+            <li><a href="{% url 'news_home' %}">Новости</a></li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+          </ul>
+{% endblock %}
+
+{% block content %}
+<div class = "about_me_1">
+
+          <div class="foto_1">
+            <img src= "{% static 'webexample/img/foto1.jpg' %}" alt="Igor Dudichev">
+          </div>
+
+          <div class="info_1">
+            <h2>РЕЗЮМЕ</h2>
+            <h3>Игорь Дудичев</h3>
+            <p><i>Дата рождения:</i> 15.12.1989</p>
+            <p><i>Проживание:</i> Нижний Новгород, Канавинский район</p>
+            <p><i>Телефон: </i>+7 953 577 88 05</p>
+            <p><i>Электронная почта:</i> <a class="mail" href="https://mail.google.com/mail/u/0/#inbox" target="blank">igordudichev@gmail.com</a></p>
+            <p><i>Желаемая должность:</i> Python developer(стажер)</p>
+          </div>
+        </div >
+
+        <div class = "my_rezume">
+            <h3>Опыт работы</h3>
+            <hr>
+            <div class="homecredit">
+              <p class="data">Август 2012 - февраль 2013</p>
+              <h4 class="hc">Банк Хоум Кредит</h4>
+              <p class="city">Нижний Новгород, <a href="https://www.homecredit.ru/" target="blank">www.homecredit.ru</a></p>
+              <h4 class="the_post">Кредитный специалист</h4>
+              <p class="duties">Обязанности:</p>
+              <ul>
+                <li>консультирование по вопросам выдачи займов;</li>
+                <li>подбор подходящих клиенту финансовых продуктов;</li>
+                <li>расчёт кредитных ставок;</li>
+                <li>оформление договоров;</li>
+              </ul>
+            </div>
+           <div class="pochtabank">
+             <p class="data">Август 2014 - июнь 2019</p>
+             <h4 class="pb">Почта Банк</h4>
+              <p class="city">Нижний Новгород, <a href="https://www.pochtabank.ru/" target="blank">www.pochtabank.ru</a></p>
+              <h4 class="the_post">Старший специалист по работе с проблемными активами</h4>
+              <p class="duties">Обязанности:</p>
+              <ul>
+                <li>ведение телефонных переговоров с должниками о погашении задолженности;</li>
+                <li>объяснение структуры возникшей просроченной задолженности, условий кредитного договора;</li>
+                <li>объяснение последствий неполной и/или несвоевременной выплаты;</li>
+                <li>консультации по способам погашения задолженности;</li>
+                <li>мотивация заемщика для оплаты задолженности;</li>
+              </ul>
+           </div>
+
+           <h3>Образование</h3>
+           <hr>
+           <div class="education">
+             <h4>Нижегородский государственный университет им. Н.И. Лобачевского</h4>
+             <p class="data">2007 - 2012</p>
+             <p><i>Факультет: </i>Экономический</p>
+             <p><i>Специальность: </i>Менеджмент организации</p>
+             <p><i>Специализация: </i>Финансовый менеджмент</p>
+           </div>
+           <h3>Обо мне</h3>
+           <hr>
+           <div class="info_me">
+             <p>Изучаю английский язык, прохожу курсы на Geekbrains, Stepik, Python tutor, Участник 4-х недельного тестового периода обучения School 21 в Казани(<a href="https://21-school.ru/" target="blank">«Школа 21»</a> — образовательная инициатива Сбербанка, основанная на методике «школы будущего» , используемой в инновационной французской школе программирования "Ecole 42" с 2013 года. «Школа 21» готовит специалистов мирового уровня в области информационных технологий (IT) по уникальной образовательной методологии: без учителей, без лекций, без оценок. В основе методики лежит метод peer-to-peer («равный равному»), или коллективное обучение).</p>
+             <p>Большая мотивация сменить сферу деятельности и развиваться в программирование.</p>
+             <p>Задания выполненные в ходе прохождения обучения(будут дополняться):</p>
+             <p>Github: <a href="https://github.com/Dudichevis/Stepik_OOP_task" target="blank">www.github.com/Dudichevis</a></p>
+           </div>
+
+           <h3>Сертификаты</h3>
+           <hr>
+           <div class="certificates">
+            <ul>
+              <li><a href="https://fructcode.com/ru/certificates/8b36b96f6400b873436332d0ec9c3a0f/ru/" target="blank">HTML/CSS</a></li>
+              <li><a href="https://geekbrains.ru/certificates/675934" target="blank">HTML/CSS. Интерактивный курс</a></li>
+              <li><a href="https://fructcode.com/ru/certificates/c19f77b91896497d5477ca327a86804a/ru/" target="blank">Linux/GIT/Hosting</a></li>
+              <li><a href="https://geekbrains.ru/certificates/666596" target="blank">Интенсив “Основы программирования”</a></li>
+              <li><a href="https://geekbrains.ru/certificates/681689" target="blank">Интенсив “Основы программирования”</a></li>
+              <li><a href="https://stepik.org/cert/250283" target="blank">Основы Git</a></li>
+              <li><a href="https://www.coursera.org/account/accomplishments/certificate/QBJRN48HUQCE" target="blank">Базы данных (Databases)</a></li>
+              <li><a href="https://geekbrains.ru/certificates/714534" target="blank">Базы данных. Интерактивный курс</a></li>
+              <li><a href="https://geekbrains.ru/certificates/663453" target="blank">Интенсив “Веб-разработка для начинающих”</a></li>
+              <li><a href="https://geekbrains.ru/certificates/696315" target="blank">Видеокурс Основы языка Python</a></li>
+              <li><a href="https://stepik.org/cert/277115" target="blank">Программирование на Python</a></li>
+           
+            </ul>
+             
+           </div>
+            
+        </div>
+{% endblock %}
+

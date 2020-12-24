@@ -1,0 +1,44 @@
+{% extends 'webexample/layout.html' %}
+
+
+{% block title %}Удаление статьи{% endblock %}
+
+{% block info_menu %}
+          <ul class = "menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'rezume' %}">Резюме</a></li>
+            <li class="selected"><a href="{% url 'news_home' %}">Новости</a>
+              <ul class="submenu">
+                <li><a href="{% url 'create' %}" id="qwert">Добавить новость</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+          </ul>
+{% endblock %}
+
+
+
+{% block content %}
+
+        <div class="add_news">
+        <h2>Удаление статьи</h2> 
+        <form method="Post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-success">Удалить статью</button>
+        </form>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
